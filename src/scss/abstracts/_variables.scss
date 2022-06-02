@@ -1,0 +1,17 @@
+$white: #fff;
+$primary: #20DF7F;
+$secondary: #224957;
+$input-background: #3c5e6a;
+
+$border-radius: 10px;
+
+// Generate spacers
+$spacer: 4px !default;
+$spacers-steps: 16 !default; 
+
+$spacers: () !default;
+@for $i from 0 through $spacers-steps {
+  $spacers: map-merge($spacers, ($i: $spacer * $i))
+}
+
+$font-family: 'Lexend Deca', sans-serif;

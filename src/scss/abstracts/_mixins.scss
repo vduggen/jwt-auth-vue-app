@@ -1,0 +1,35 @@
+@mixin set-w-h($size) {
+    width: $size;
+    height: $size;
+}
+
+@mixin d-flex($a: center, $j: center, $d: row) {
+    display: flex;
+    align-items: $a;
+    justify-content: $j;
+    flex-direction: $d;
+}
+
+@mixin flex-break {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin border-radius($size: $border-radius) {
+    border-radius: $size;
+}
+
+@mixin font-family($family: $font-family) {
+    font-family: $family;
+}
+
+@mixin link($c: $primary) {
+    color: $c;
+    text-decoration: none;
+    transition: ease-in-out .3s;
+    font: 500 .875rem $font-family;
+
+    &:hover {
+        filter: brightness(80%);
+    }
+}
