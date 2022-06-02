@@ -1,5 +1,7 @@
 <template>
-    <LoginWrapper is-login>
+    <LoginWrapper>
+        <BaseField label="Name" />
+
         <BaseField label="Login" />
 
         <BaseFieldPassword />
