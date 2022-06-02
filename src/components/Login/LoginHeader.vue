@@ -1,10 +1,13 @@
 <template>
     <header class="header">
-        <span class="header__title">
+        <span
+            class="header__title"
+            :class="{ 'header__title--register': !isLogin }"
+        >
             {{ getText }}
         </span>
 
-        <span class="header__subtitle">
+        <span class="header__subtitle" v-if="isLogin">
             Lorem ipsum dolor sit amet consectetur!
         </span>
     </header>
@@ -35,6 +38,10 @@ export default {
     &__title {
         line-height: normal;
         font: 400 4rem $font-family;
+        
+        &--register {
+            margin-bottom: get-spacer(9);
+        }
     }
 
     &__subtitle {
