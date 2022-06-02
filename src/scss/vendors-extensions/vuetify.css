@@ -1,0 +1,12 @@
+.login__input .v-input__slot {
+    box-shadow: none !important;
+}
+
+.footer__remember .v-label {
+    font-size: .875rem;
+}
+
+/* Remove margin negative from row */
+.row {
+    margin: 0;
+}
