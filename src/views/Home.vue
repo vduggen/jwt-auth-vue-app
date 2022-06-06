@@ -6,10 +6,23 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 import BaseBackground from '../components/Base/BaseBackground.vue';
 
 export default {
   name: "Home",
-  components: { BaseBackground }
+  
+  components: { BaseBackground },
+
+  computed: {
+    ...mapGetters({
+      getUser: 'auth/getUser'
+    })
+  },
+  mounted() {
+    if (!this.getUser) {
+      this.$router.push('/login');
+    }
+  }
 }
 </script>
