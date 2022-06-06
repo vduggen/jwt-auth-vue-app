@@ -1,3 +1,7 @@
+.v-application {
+    font-family: 'Lexend Deca', sans-serif;
+}
+
 .input .v-input__slot {
     box-shadow: none !important;
 }
