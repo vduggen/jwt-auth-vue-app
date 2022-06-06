@@ -17,6 +17,8 @@
             block
             dark
             class="footer__button"
+            :loading="loading"
+            @click="$emit('action-button')"
         >
             {{ getText }}
         </v-btn>
@@ -27,6 +29,10 @@
     export default {
         props: {
             isLogin: {
+                type: Boolean,
+                default: false
+            },
+            loading: {
                 type: Boolean,
                 default: false
             }
@@ -64,7 +70,7 @@
     &__button {
         text-transform: unset;
         @include border-radius;
-        font: 400 .875rem $font-family; 
+        font: 400 .875rem $font-family;
     }
 }
 </style>

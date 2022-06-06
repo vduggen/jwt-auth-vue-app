@@ -6,7 +6,11 @@
             <div class="wrapper__main">
                 <slot />
 
-                <LoginFooter :is-login="isLogin" />
+                <LoginFooter
+                    :loading="loading"
+                    :is-login="isLogin"
+                    @action-button="$emit('action-button')"
+                />
             </div>
         </div>
     </BaseBackground>
@@ -19,13 +23,17 @@ import BaseBackground from '../Base/BaseBackground.vue';
 
 export default {
     components: {
-    LoginFooter,
-    LoginHeader,
-    BaseBackground
-},
+        LoginFooter,
+        LoginHeader,
+        BaseBackground
+    },
 
     props: {
         isLogin: {
+            type: Boolean,
+            default: false
+        },
+        loading: {
             type: Boolean,
             default: false
         }
