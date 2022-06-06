@@ -6,12 +6,19 @@
         class="input"
         v-bind="$attrs"
         v-on="$listeners"
+        @input="$emit('input', $event)"
+        :value="value"
     />
 </template>
 
 <script>
 export default {
-    
+    props: {
+        value: {
+            type: String,
+            default: ''
+        }
+    }
 }
 </script>
 

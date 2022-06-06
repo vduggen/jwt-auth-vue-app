@@ -5,6 +5,8 @@
         :append-icon="input.icon"
         :type="input.type"
         @click:append="viewPassword = !viewPassword"
+        @input="$emit('input', $event)"
+        :value="value"
     />
 </template>
 
@@ -14,6 +16,13 @@ import BaseField from "./BaseField";
 export default {
     components: {
         BaseField
+    },
+
+    props: {
+        value: {
+            type: String,
+            default: ''
+        }
     },
 
     data() {
